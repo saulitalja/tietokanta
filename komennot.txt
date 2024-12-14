@@ -1,0 +1,40 @@
+sudo -i
+apt-get update 
+apt-get upgrade
+apt install python3
+apt install python3-pip
+apt install python3-psycopg2
+apt install python3-flask
+pip install psycopg2-binary
+apt install apache2
+apt install firefox
+apt install postgresql
+apt install php
+apt-get install php-pgsql
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+sudo apt install libapache2-mod-php php-pgsql php-fpm
+sudo systemctl start apache2
+sudo systemctl enable apache2
+
+sudo adduser postgres sudo
+passwd postgres
+su - postgres
+psql
+
+CREATE DATABASE postgres;
+ALTER ROLE postgres CREATEDB;
+
+CREATE TABLE Henkilo (
+   HenkiloID      INTEGER	PRIMARY KEY, 
+   Etunimi    VARCHAR,
+   Sukunimi    VARCHAR);
+
+ALTER TABLE Henkilo ALTER COLUMN HenkiloID ADD GENERATED ALWAYS AS IDENTITY;
+
+grant all privileges on database postgres to postgres;
+grant all on table henkilo to postgres;
+alter user postgres with password 'postgres’;
+
+quit
+

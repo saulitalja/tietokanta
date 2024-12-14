@@ -1,0 +1,15 @@
+POST /lisaa_henkilo – Lisää uusi henkilö tietokantaan.
+PUT /paivita_henkilo/<int:HenkiloID> – Päivitä henkilön tiedot ID:n perusteella.
+DELETE /poista_henkilo/<int:HenkiloID> – Poista henkilö tietokannasta ID:n perusteella.
+GET /hae_henkilo/<int:HenkiloID> – Hae henkilön tiedot ID:n perusteella.
+GET /hae_kaikki_henkilot – Hae kaikki henkilöt tietokannasta.
+
+curl -X POST http://127.0.0.1:5000/lisaa_henkilo -H "Content-Type: application/json" -d '{"Etunimi": "Matti", "Sukunimi": "Meikäläinen"}'
+
+curl -X PUT http://127.0.0.1:5000/paivita_henkilo/4 -H "Content-Type: application/json" -d '{"Etunimi": "Matti", "Sukunimi": "Päivitetty"}'
+
+curl -X DELETE http://127.0.0.1:5000/poista_henkilo/1
+
+curl -X GET http://127.0.0.1:5000/hae_henkilo/3
+
+curl -X GET http://127.0.0.1:5000/hae_kaikki_henkilot
