@@ -34,6 +34,7 @@ ALTER TABLE Henkilot ALTER COLUMN HenkiloID ADD GENERATED ALWAYS AS IDENTITY;
 grant all privileges on database postgres to postgres;
 grant all on table henkilot to postgres;
 alter user postgres with password 'postgres’;
+#VARMISTA ETTÄ "ALTER" TULOSTUU SALASANAN SYÖTÖSSÄ! 
 
 quit
 exit
