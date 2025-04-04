@@ -39,3 +39,6 @@ alter user postgres with password 'postgres';
 quit
 exit
 
+Kopioi tämän jälkeen koko tietokanta git-paketti koneellesi git clone <paketin nimi>
+Kopioi kaikki *.php ja *.py tiedostot /var/www/html -hakemistoon
+Boottaa ja yritä päästä verkkosivulle http://>ip-osoite>:80/index.php
