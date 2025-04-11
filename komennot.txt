@@ -17,6 +17,9 @@ sudo systemctl start apache2
 sudo systemctl enable apache2
 
 sudo adduser postgres sudo
+#SYÖTÄ SALASANA postgres ja ÄLÄ VÄLITÄ VAIKKA JÄRJESTELMÄ VAROITTAA SALASANASTA
+#SALASANA postgres on HARD-KOODATTU OHJELMAAN, JOTEN ERI SALASANA ESTÄÄ OHJELMAA TOIMIMASTA
+
 passwd postgres
 su - postgres
 psql
@@ -39,6 +42,8 @@ alter user postgres with password 'postgres';
 quit
 exit
 
-Kopioi tämän jälkeen koko tietokanta git-paketti koneellesi git clone <paketin nimi>
-Kopioi kaikki *.php ja *.py tiedostot /var/www/html -hakemistoon
-Boottaa ja yritä päästä verkkosivulle http://>ip-osoite>:80/index.php
+#Kopioi tämän jälkeen koko tietokanta git-paketti koneellesi git clone <paketin nimi>
+#Kopioi kaikki *.php ja *.py tiedostot /var/www/html -hakemistoon
+#Boottaa tai käynnistä pelkkä Apache uudestaan ja yritä päästä verkkosivulle http://>ip-osoite>:80/index.php
+#Voit käyttää myös omaa selaintasi virtuaalikoneen selaimen sijaan!
+
